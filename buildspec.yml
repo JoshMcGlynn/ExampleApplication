@@ -1,11 +1,11 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - echo Installing dependencies
-
   build:
     commands:
-      - echo Deploying application to EC2
-      - ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-50-4-38.eu-north-1.compute.amazonaws.com "cd ExampleApplication/SimpleApplication && git pull origin master && npm install && pm2 restart mathapp"
+      - echo "Build stage running"
+      - echo "Code successfully received from GitHub"
+
+artifacts:
+  files:
+    - '**/*'
